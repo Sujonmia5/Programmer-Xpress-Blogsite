@@ -3,6 +3,9 @@ import style from './sliderSection.module.css'
 import SliderComponents from '../slider/slider';
 import { HiMiniCalendarDays, HiOutlineChatBubbleOvalLeft, HiOutlineUser } from "react-icons/hi2";
 import { Button, Card, CardBody, CardFooter, CardHeader, Image } from '@nextui-org/react';
+import { Black_Ops } from '@/fonts/fonts';
+
+
 
 const SliderSection = () => {
     return (
@@ -16,7 +19,7 @@ const SliderSection = () => {
                         <Button color='primary' className={style.button} variant='shadow'>
                             Read More
                         </Button>
-                        <h4 className={style.card_h4}>Your checklist for better sleep</h4>
+                        <h4 className={`${style.card_h4}`}>Your checklist for better sleep</h4>
 
                     </CardBody>
 

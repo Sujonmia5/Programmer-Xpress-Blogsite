@@ -4,6 +4,7 @@ import { Button, Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenu, Nav
 import Link from 'next/link';
 import { useState } from 'react';
 import Image from 'next/image';
+import Hamburger from 'hamburger-react';
 
 
 const NavbarPublic = () => {
@@ -33,15 +34,15 @@ const NavbarPublic = () => {
             maxWidth='xl'
             className='bg-[#242243] text-white shadow-2xl'
         >
-            <NavbarContent className="sm:hidden" justify="start">
-                <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} />
+            <NavbarContent className="sm:hidden -ml-5" justify="start">
+                <Hamburger size={25} color='#fff' toggled={isMenuOpen} toggle={setIsMenuOpen} />
             </NavbarContent>
 
             <NavbarContent className="sm:hidden pr-3" justify="center">
                 <NavbarBrand role='link'>
                     <Image src='https://i.ibb.co/wgQrtpG/PXPRESS.png'
                         width={150}
-                        height={60} className='object-cover' />
+                        height={60} className='object-cover' alt='brand image' />
                 </NavbarBrand>
             </NavbarContent>
 
@@ -50,7 +51,7 @@ const NavbarPublic = () => {
                     <Link href={'/'}>
                         <Image src='https://i.ibb.co/wgQrtpG/PXPRESS.png'
                             width={250}
-                            height={80} />
+                            height={80} alt='brand image' />
                     </Link>
 
                 </NavbarBrand>
