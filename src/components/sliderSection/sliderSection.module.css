@@ -1,0 +1,51 @@
+.hero_slider_wrapper {
+    @apply grid grid-cols-3 mt-5 gap-4;
+}
+
+.slider_responsive {
+    @apply col-span-3 md:col-span-2;
+}
+
+.hero_card_home {
+    @apply col-span-3 md:col-span-1;
+}
+
+.card {
+    @apply w-full h-[200px] col-span-12 sm:col-span-7 my-5 relative;
+}
+
+.card_h4 {
+    @apply -text-px-light font-medium text-xl mt-5 mb-4;
+}
+
+.card_body {
+    @apply absolute z-10 bottom-1 flex-col items-start;
+}
+
+.card_img {
+    @apply z-0 w-full h-full object-cover relative;
+}
+
+.button {
+    @apply -text-px-white rounded uppercase;
+}
+
+.card_footer {
+    @apply absolute bottom-0 left-2 z-10;
+}
+
+.card_content_footer {
+    @apply flex gap-x-5;
+    color: var(--px-secondary);
+}
+
+.shap {
+    background-color: black;
+    width: 100%;
+    height: 102%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0.4;
+}
