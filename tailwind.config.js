@@ -37,7 +37,7 @@ module.exports = {
       '-px-teal': '#20c997',
       '-px-cyan': '#0dcaf0',
       '-px-white': '#fff',
-      '-px-gray': '#6c757d',
+      '-px-gray': '#a7a7a7',
       '-px-gray-dark': '#343a40',
       '-px-primary': '#0d6efd',
       '-px-secondary': '#6c757d',
@@ -62,6 +62,11 @@ module.exports = {
               DEFAULT: '#ec4949',
               foreground: '#ec4949'
             },
+            secondary: {
+              DEFAULT: '#6c757d',
+              foreground: '#6c757d',
+
+            }
 
           },
         },

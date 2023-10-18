@@ -31,7 +31,7 @@ const SliderComponents = () => {
             <Swiper
                 pagination={pagination}
                 modules={[Autoplay, Pagination]}
-                className="mySwiper"
+                className="mySwiper rounded-md"
                 autoplay={{
                     delay: 5000,
                     disableOnInteraction: false

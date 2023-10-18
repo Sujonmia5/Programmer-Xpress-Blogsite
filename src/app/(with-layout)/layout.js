@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer/footer";
 import NavbarPublic from "@/components/Navbar/Navbar";
 
 const layout = ({ children }) => {
@@ -12,6 +13,8 @@ const layout = ({ children }) => {
                     {children}
                 </div>
             </div>
+            <hr />
+            <Footer />
         </div>
     );
 };

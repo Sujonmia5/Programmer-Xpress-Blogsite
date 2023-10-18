@@ -1,0 +1,41 @@
+.blog_card {
+    @apply w-full border -border-px-secondary sm:h-52 sm:grid grid-cols-5 gap-x-6 rounded-lg items-center shadow-md shadow-foreground-400 my-5 -bg-px-dark;
+}
+
+.card_img {
+    @apply w-full col-span-2 h-full;
+}
+
+.card_img div {
+    @apply w-full h-full p-1;
+}
+
+.card_img div img {
+    @apply h-full w-full rounded object-cover;
+}
+
+
+.blog_card:hover .blog_img {
+    transform: scale(1.08);
+}
+
+.card_content {
+    @apply w-full col-span-3 pr-4 text-justify;
+}
+
+.card_content h3 a {
+    @apply -text-px-light font-medium text-2xl capitalize tracking-wider;
+    transition: all 0.4s ease-in-out;
+}
+
+.card_content h3 a:hover {
+    @apply -text-px-primaryColor;
+}
+
+.blog_info {
+    @apply flex gap-x-4;
+}
+
+.blog_info span {
+    @apply flex items-center gap-x-1 text-sm capitalize -text-px-gray;
+}

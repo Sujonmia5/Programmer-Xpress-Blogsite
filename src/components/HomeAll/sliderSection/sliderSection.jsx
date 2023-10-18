@@ -1,9 +1,8 @@
 'use client'
 import style from './sliderSection.module.css'
 import SliderComponents from '../slider/slider';
-import { HiMiniCalendarDays, HiOutlineChatBubbleOvalLeft, HiOutlineUser } from "react-icons/hi2";
-import { Button, Card, CardBody, CardFooter, CardHeader, Image } from '@nextui-org/react';
-import { Black_Ops } from '@/fonts/fonts';
+import { HiMiniCalendarDays, HiMiniChatBubbleOvalLeft, HiOutlineChatBubbleOvalLeft, HiOutlineUser, HiUser } from "react-icons/hi2";
+import { Button, Card, CardBody, CardFooter, Image } from '@nextui-org/react';
 
 
 
@@ -31,7 +30,7 @@ const SliderSection = () => {
                     <CardFooter className={style.card_footer}>
                         <div className={style.card_content_footer}>
                             <span className='flex gap-1 items-center'>
-                                <HiOutlineUser />
+                                <HiUser />
                                 user Name
                             </span>
                             <span className='flex gap-1 items-center'>
@@ -39,7 +38,7 @@ const SliderSection = () => {
                                 date
                             </span>
                             <span className='flex gap-1 items-center'>
-                                <HiOutlineChatBubbleOvalLeft />
+                                <HiMiniChatBubbleOvalLeft />
                                 comments
                             </span>
                         </div>
@@ -50,7 +49,7 @@ const SliderSection = () => {
                         <Button color='primary' className={style.button} variant='shadow'>
                             Read More
                         </Button>
-                        <h4 className={style.card_h4}>Your checklist for better sleep</h4>
+                        <h4 className={`${style.card_h4}`}>Your checklist for better sleep</h4>
 
                     </CardBody>
 
@@ -62,7 +61,7 @@ const SliderSection = () => {
                     <CardFooter className={style.card_footer}>
                         <div className={style.card_content_footer}>
                             <span className='flex gap-1 items-center'>
-                                <HiOutlineUser />
+                                <HiUser />
                                 user Name
                             </span>
                             <span className='flex gap-1 items-center'>
@@ -70,12 +69,13 @@ const SliderSection = () => {
                                 date
                             </span>
                             <span className='flex gap-1 items-center'>
-                                <HiOutlineChatBubbleOvalLeft />
+                                <HiMiniChatBubbleOvalLeft />
                                 comments
                             </span>
                         </div>
                     </CardFooter>
                 </Card>
+
             </div>
         </div>
     );
