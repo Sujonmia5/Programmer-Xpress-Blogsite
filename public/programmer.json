@@ -1,0 +1,74 @@
+[
+    {
+        "title": "Sample Blog Post 1",
+        "author": {
+            "name": "John Doe",
+            "image": "author_john_doe.jpg"
+        },
+        "date_time": "2023-10-19",
+        "content": "This is the content of the first blog post. Lorem ipsum...",
+        "images": [
+            "https://i.ibb.co/hBfsXLp/front-left-side-47.jpg",
+            "https://i.ibb.co/Yh9X4FZ/tigorevtigorevleftfrontthreequarter.jpg",
+            "https://i.ibb.co/GscKZkp/accord.jpg"
+        ],
+        "tags": [
+            "Technology",
+            "Programming"
+        ],
+        "comments": [
+            {
+                "user": {
+                    "name": "Alice",
+                    "image": "user_alice.jpg"
+                },
+                "comment": "Great post!"
+            },
+            {
+                "user": {
+                    "name": "Bob",
+                    "image": "user_bob.jpg"
+                },
+                "comment": "I learned a lot from this."
+            }
+        ]
+    },
+    {
+        "title": "Sample Project Post 1",
+        "author": {
+            "name": "John Doe",
+            "image": "author_john_doe.jpg"
+        },
+        "date_time": "2023-10-19",
+        "content": "This is the content of the first blog post. Lorem ipsum...",
+        "images": [
+            "https://i.ibb.co/ggnrr6G/My-project-1.png",
+            "https://i.ibb.co/n1k6hrH/Printer-Repair.jpg",
+            "https://i.ibb.co/PNVQWC9/Header-img-2.jpg"
+        ],
+        "links": {
+            "link_Demo": "blog_image2.jpg",
+            "link_Source": "blog_image2.jpg"
+        },
+        "tags": [
+            "nodejs",
+            "Programming"
+        ],
+        "comments": [
+            {
+                "user": {
+                    "name": "Alice",
+                    "image": "user_alice.jpg"
+                },
+                "comment": "Great post!"
+            },
+            {
+                "user": {
+                    "name": "Bob",
+                    "image": "user_bob.jpg"
+                },
+                "comment": "I learned a lot from this."
+            }
+        ]
+    }
+]

@@ -1,16 +1,13 @@
 'use client'
 import { Button, Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from '@nextui-org/react';
 // import style from './navbar.module.css';
-import Link from 'next/link';
 import { useState } from 'react';
 import Image from 'next/image';
 import Hamburger from 'hamburger-react';
 
 
 const NavbarPublic = () => {
-
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-
 
     const menuItems = [
         "Profile",
@@ -25,7 +22,6 @@ const NavbarPublic = () => {
         "Log Out",
     ];
 
-
     return (
         <Navbar
             isBordered
@@ -39,7 +35,7 @@ const NavbarPublic = () => {
             </NavbarContent>
 
             <NavbarContent className="sm:hidden pr-3" justify="center">
-                <NavbarBrand role='link'>
+                <NavbarBrand role='a'>
                     <Image src='https://i.ibb.co/wgQrtpG/PXPRESS.png'
                         width={150}
                         height={60} className='object-cover' alt='brand image' />
@@ -48,41 +44,41 @@ const NavbarPublic = () => {
 
             <NavbarContent className="hidden sm:flex gap-4 w-[1200px]" justify="center">
                 <NavbarBrand>
-                    <Link href={'/'}>
+                    <a href={'/'}>
                         <Image src='https://i.ibb.co/wgQrtpG/PXPRESS.png'
                             width={250}
                             height={80} alt='brand image' />
-                    </Link>
+                    </a>
 
                 </NavbarBrand>
                 <NavbarItem>
-                    <Link color="foreground" href="/">
+                    <a color="foreground" href="/">
                         Home
-                    </Link>
+                    </a>
                 </NavbarItem>
                 <NavbarItem isActive>
-                    <Link href="/blog" aria-current="page">
+                    <a href="/category/blog" aria-current="page">
                         Blog
-                    </Link>
+                    </a>
                 </NavbarItem>
                 <NavbarItem>
-                    <Link color="foreground" href="category">
+                    <a color="foreground" href="category">
                         Category
-                    </Link>
+                    </a>
                 </NavbarItem>
                 <NavbarItem>
-                    <Link color="foreground" href="project">
+                    <a color="foreground" href="project">
                         Project
-                    </Link>
+                    </a>
                 </NavbarItem>
             </NavbarContent>
 
             <NavbarContent justify="end" className="hidden sm:flex">
                 <NavbarItem className="hidden lg:flex">
-                    <Link href="login">Login</Link>
+                    <a href="login">Login</a>
                 </NavbarItem>
                 <NavbarItem>
-                    <Button as={Link} color="warning" href="#" variant="flat">
+                    <Button color="warning" href="#" variant="flat">
                         Sign Up
                     </Button>
                 </NavbarItem>
@@ -91,7 +87,7 @@ const NavbarPublic = () => {
             <NavbarMenu className='top-40'>
                 {menuItems.map((item, index) => (
                     <NavbarMenuItem key={`${item}-${index}`}>
-                        <Link
+                        <a
                             className="w-full"
                             color={
                                 index === 2 ? "warning" : index === menuItems.length - 1 ? "danger" : "foreground"
@@ -100,7 +96,7 @@ const NavbarPublic = () => {
                             size="lg"
                         >
                             {item}
-                        </Link>
+                        </a>
                     </NavbarMenuItem>
                 ))}
             </NavbarMenu>
