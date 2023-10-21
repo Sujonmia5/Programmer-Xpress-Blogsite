@@ -1,0 +1,26 @@
+.single_card {
+    @apply -bg-px-dark -text-px-white max-w-[370px];
+    -webkit-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.single_card h1 {
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.Card_img {
+    @apply h-48 rounded-none transition-all object-cover;
+}
+
+.single_card:hover img {
+    -webkit-transform: scale(1.12);
+    -ms-transform: scale(1.12);
+    transform: scale(1.12);
+}
+
+.single_card:hover h1 {
+    color: var(--px-primaryColor);
+}

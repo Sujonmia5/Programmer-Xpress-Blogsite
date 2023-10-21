@@ -34,7 +34,7 @@ const NavbarPublic = () => {
                 <Hamburger size={25} color='#fff' toggled={isMenuOpen} toggle={setIsMenuOpen} />
             </NavbarContent>
 
-            <NavbarContent className="sm:hidden pr-3" justify="center">
+            <NavbarContent className="sm:hidden -mr-3" justify="center">
                 <NavbarBrand role='a'>
                     <Image src='https://i.ibb.co/wgQrtpG/PXPRESS.png'
                         width={150}

@@ -7,7 +7,7 @@ const Category = () => {
     const { data: categories = [], error } = useQuery({
         queryKey: ['category'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5500/category');
+            const res = await fetch(`${process.env.FETCH_URI}category`);
             const data = await res.json();
             return data;
         }
