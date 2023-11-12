@@ -1,5 +1,6 @@
 'use client'
 import ProjectPagination from "@/components/Shared/pagination/pagination";
+import LoadingCard from "@/components/card/Loading";
 import SingleCard from "@/components/card/card";
 import { PaginationContext } from "@/context/paginationContext";
 import { useQuery } from "@tanstack/react-query"
@@ -8,22 +9,30 @@ import { useContext } from "react";
 export default function Home() {
   const { itemsPerPage, currentPage, setCurrentPage } = useContext(PaginationContext);
 
-  const { data: Data = [], isLoading, error } = useQuery({
+  const { data: Data = [], isLoading = true, error } = useQuery({
     queryKey: [itemsPerPage, currentPage],
     queryFn: async () => {
       const res = await fetch(`${process.env.FETCH_URI}project?pageNumber=${currentPage}&perPage=${itemsPerPage}`);
       const items = await res.json();
-      // console.log(items);
       return items;
     }
   })
   const pageCount = Math.ceil(Data.dataCount / itemsPerPage);
 
   if (error) {
-    return <div>Error</div>
+    return <div className=" grid sm:grid-cols-2 gap-4 my-10">
+      {
+        Array.from({ length: itemsPerPage }).map((data, i) => <LoadingCard key={i} />)
+      }
+
+    </div>
   }
   if (isLoading) {
-    return <div>Loading..........</div>
+    return <div className=" grid sm:grid-cols-2 gap-4 my-10">
+      {
+        Array.from({ length: itemsPerPage }).map((data, i) => <LoadingCard key={i} />)
+      }
+    </div>
   }
 
 
@@ -34,7 +43,7 @@ export default function Home() {
         <div className="w-full  my-5 rounded">
           <h5 className="text-xl p-2 bg-gradient-to-l -from-px-teal -to-px-primaryColor">Recent Posts</h5>
           {/* recent post start */}
-          <div className='grid sm:grid-cols-2 gap-4 my-10'>
+          <div className='grid sm:grid-cols-2 gap-4 mt-10 mb-5'>
 
             {
               Array.isArray(Data.result) ? Data.result.map(item => <SingleCard key={item._id} item={item} />) : <div>data</div>
@@ -53,7 +62,6 @@ export default function Home() {
 
       </div>
       {/* home left side end */}
-
 
       <div className="w-full h-24">
 

@@ -1,0 +1,19 @@
+.dashboard_navbar {
+    @apply fixed w-72 h-full z-50 border-l-8 -border-px-dark -bg-px-dark;
+    transition: all 0.5s ease;
+}
+
+.dashboard_main {
+    @apply absolute left-72 min-h-screen -bg-px-light -text-px-dark;
+    width: calc(100% - 288px);
+    transition: all 0.5s ease;
+}
+
+.dashboard_navbar.active {
+    @apply w-20;
+}
+
+.dashboard_main.active {
+    @apply left-20;
+    width: calc(100% - 80px);
+}

@@ -1,8 +1,9 @@
+import DashboardHero from "@/components/dashboard/Hero/DashboardHero";
 
 const page = () => {
     return (
-        <div>
-            dashboard
+        <div className="rounded p-5 ">
+            <DashboardHero />
         </div>
     );
 };

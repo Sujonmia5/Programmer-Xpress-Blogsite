@@ -57,12 +57,12 @@ const NavbarPublic = () => {
                     </a>
                 </NavbarItem>
                 <NavbarItem isActive>
-                    <a href="/category/blog" aria-current="page">
+                    <a href="/category" aria-current="page">
                         Blog
                     </a>
                 </NavbarItem>
                 <NavbarItem>
-                    <a color="foreground" href="category">
+                    <a color="foreground" href="/category">
                         Category
                     </a>
                 </NavbarItem>

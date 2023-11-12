@@ -4,10 +4,13 @@ import { Roboto_Font } from '@/fonts/fonts';
 import { HiMiniCalendarDays } from 'react-icons/hi2';
 
 const SingleCard = ({ item }) => {
-    const { title, date_time, images } = item
+    const { title, date_time, images, _id } = item
     console.log(item);
+    const urlRegex = /\s/g;
+    const title_url = title.toLowerCase().replace(urlRegex, '-')
+
     return (
-        <a href="/" className='w-full'>
+        <a href={`/${title_url}?id=${_id}`} className='w-full'>
             <Card
                 classNames={{
                     base: 'rounded-sm shadow-md hover:shadow-foreground-400'

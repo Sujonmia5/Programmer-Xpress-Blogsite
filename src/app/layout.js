@@ -2,11 +2,13 @@ import { Playfair } from '@/fonts/fonts'
 import './globals.css'
 import { Providers } from './providers'
 import ContextPagination from '@/context/paginationContext'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
 export const metadata = {
   title: 'ProgrammerXpress Blogs',
   description: 'Development By Md Sujon Mia',
 }
+
 
 export default function RootLayout({ children }) {
   return (

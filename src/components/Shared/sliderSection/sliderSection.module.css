@@ -35,8 +35,8 @@
 }
 
 .card_content_footer {
-    @apply flex gap-x-5;
-    color: var(--px-secondary);
+    @apply flex gap-x-1 md:gap-x-5;
+    color: var(-text-px-gray);
 }
 
 .shap {

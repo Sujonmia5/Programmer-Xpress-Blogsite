@@ -1,0 +1,12 @@
+.card_body {
+    -webkit-clip-path: polygon(0 0, 51% 0, 75% 100%, 0% 100%);
+    clip-path: polygon(0 0, 51% 0, 75% 100%, 0% 100%);
+}
+
+.newDiv {
+    background: red;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
+}
+
+.image {}

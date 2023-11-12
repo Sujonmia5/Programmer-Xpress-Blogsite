@@ -1,0 +1,48 @@
+.dashboard_link {
+    @apply pl-5 relative;
+    color: white;
+    margin-bottom: 5px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.btn {
+    @apply capitalize text-xl flex items-center py-3 gap-x-4 w-11/12 rounded-md pl-5 relative -text-px-light h-10 my-2;
+}
+
+.dashboard_link a span {
+    transition: all 0.2s ease;
+}
+
+.dashboard_link:hover {
+    background-color: #ffffff;
+    color: var(--px-dark);
+}
+
+.dashboard_link a:active a::after,
+.dashboard_link:hover a::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -60px;
+    width: 60px;
+    height: 60px;
+    z-index: -1;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0 10px #ffffff;
+}
+
+.dashboard_link a:active a::before,
+.dashboard_link:hover a::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -60px;
+    width: 60px;
+    height: 60px;
+    z-index: -1;
+    border-radius: 50%;
+    background-color: transparent;
+    box-shadow: 35px -35px 0 10px white;
+}

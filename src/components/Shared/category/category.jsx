@@ -4,7 +4,7 @@ import Li from "./link";
 
 const Category = () => {
 
-    const { data: categories = [], error } = useQuery({
+    const { data: categories = [], isLoading, error } = useQuery({
         queryKey: ['category'],
         queryFn: async () => {
             const res = await fetch(`${process.env.FETCH_URI}category`);
@@ -12,6 +12,9 @@ const Category = () => {
             return data;
         }
     })
+    if (isLoading) {
+        return <li>loading</li>
+    }
 
     return (
         <div className="py-5">

@@ -41,7 +41,7 @@ const PaginationPage = ({ pageCount }) => {
             <button
                 ref={ref}
                 className={`${className ? className : ""
-                    } ${isActive ? "text-white bg-gradient-to-r -from-px-primaryColor -to-px-teal" : ""}`}
+                    } ${isActive ? "-text-px-white bg-gradient-to-r -from-px-primaryColor -to-px-teal" : "-text-px-white"}`}
                 onClick={() => { setCurrentPage(value), setPage(value) }}
             >
                 {value}
@@ -58,10 +58,14 @@ const PaginationPage = ({ pageCount }) => {
             total={pageCount}
             initialPage={currentPage}
             onChange={(e) => setCurrentPage(e)}
-            className="gap-2"
+            className="gap-3"
             radius="full"
             renderItem={renderItem}
             variant="light"
+            classNames={{
+                base: 'flex justify-center -text-px-light mb-5',
+                item: '-text-px-light text-lg'
+            }}
         />
     );
 };

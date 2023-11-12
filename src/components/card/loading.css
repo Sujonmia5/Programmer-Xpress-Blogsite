@@ -1,0 +1,59 @@
+.card {
+    flex-basis: 25%;
+    width: 100%;
+    padding: 0.5rem;
+}
+
+.card_loader__anim {
+    animation-name: fadeInOut;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.card_content {
+    padding: 0.5rem;
+}
+
+.card_loader__img {
+    width: 100%;
+    padding-top: 56.25%;
+    /* 16:9 */
+    contain: strict;
+    margin-bottom: 0.5rem;
+    background-color: var(--px-gray);
+}
+
+.card_loader__title {
+    width: 100%;
+    height: 2.5ex;
+    margin-bottom: 0.5rem;
+    background-color: var(--px-gray);
+}
+
+.card_loader__subtitle {
+    width: 100%;
+    height: 2.5ex;
+    margin-bottom: 0.5rem;
+    background-color: var(--px-gray);
+}
+
+.card_loader__text {
+    width: 100%;
+    height: 4.5ex;
+    background-color: var(--px-gray);
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

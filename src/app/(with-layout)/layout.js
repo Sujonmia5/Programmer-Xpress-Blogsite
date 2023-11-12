@@ -10,18 +10,19 @@ import { HiOutlineSearchCircle } from "react-icons/hi";
 import { HiCalendarDays, HiChatBubbleOvalLeft } from "react-icons/hi2";
 
 const queryClient = new QueryClient()
+
 const layout = ({ children }) => {
     return (
         <QueryClientProvider client={queryClient}>
             <div className="">
-                {/* <div className="max-w-6xl mx-auto h-24">
+                <div className="max-w-6xl mx-auto h-24">
                     ads
-                </div> */}
+                </div>
                 <NavbarPublic />
                 <div className="container bg-red-600 mx-auto">
-                    {/* <div className="w-full h-64">
+                    <div className="w-full h-64">
                         ads google
-                    </div> */}
+                    </div>
                     <SliderSection />
                     <div className="grid grid-cols-3 gap-x-4">
                         <div className="col-span-3 md:col-span-2">
